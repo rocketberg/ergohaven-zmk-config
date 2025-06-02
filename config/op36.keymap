@@ -37,44 +37,65 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        ru_comma {
+            bindings = <&kp LS(NUMBER_6)>;
+            key-positions = <26 27>;
+        };
+
+        ru_dot {
+            bindings = <&kp LS(NUMBER_7)>;
+            key-positions = <27 28>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R          &kp T                          &kp Y  &kp U  &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F          &kp G                          &kp H  &kp J  &kp K      &kp L    &kp SEMICOLON
-  &kp Z  &kp X  &kp C  &kp V          &kp B                          &kp N  &kp M  &kp COMMA  &kp DOT  &kp SQT
-                       &kp BACKSPACE  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &mo 3
+  &kp Q  &kp W  &kp E  &kp R  &kp T                          &kp Y  &kp U  &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F  &kp G                          &kp H  &kp J  &kp K      &kp L    &kp SEMICOLON
+  &kp Z  &kp X  &kp C  &kp V  &kp B                          &kp N  &kp M  &kp COMMA  &kp DOT  &kp SQT
+                       &mo 3  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &mo 3
             >;
         };
 
         nav {
             bindings = <
-  &kp N1        &kp N2        &kp N3            &kp N4          &kp N5                    &kp N6  &kp N7           &kp N8             &kp N9         &kp N0
-  &kp LEFT_GUI  &kp LALT      &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none                     &none   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_GUI
-  &kp TAB       &kp CAPSLOCK  &none             &kp ESCAPE      &none                     &none   &kp ESCAPE       &none              &kp CAPSLOCK   &kp BACKSPACE
-                                                &trans          &none   &trans    &trans  &none   &trans
+  &kp N1        &kp N2        &kp N3            &kp N4          &kp N5                      &kp N6  &kp N7           &kp N8             &kp N9         &kp N0
+  &kp LEFT_GUI  &kp LALT      &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp HOME                    &none   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_GUI
+  &kp TAB       &kp CAPSLOCK  &none             &kp ESCAPE      &kp END                     &none   &kp ESCAPE       &none              &kp CAPSLOCK   &kp BACKSPACE
+                                                &trans          &none     &trans    &trans  &none   &trans
             >;
         };
 
         sym {
             bindings = <
-  &none          &kp LT                &kp EQUAL  &kp GT                 &kp GRAVE                    &kp CARET  &kp LBKT        &kp UNDER      &kp RBKT         &none
-  &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &kp PLUS                     &kp PRCNT  &kp LEFT_BRACE  &kp SEMICOLON  &kp RIGHT_BRACE  &kp EXCLAMATION
-  &kp HASH       &kp STAR              &kp COLON  &kp FSLH               &none                        &none      &kp PIPE        &kp TILDE      &kp AMPS         &kp DLLR
-                                                  &trans                 &none      &trans    &trans  &trans     &trans
+  &kp AT         &kp LT                &kp EQUAL  &kp GT                 &kp GRAVE                       &kp CARET  &kp LBKT        &kp UNDER      &kp RBKT         &none
+  &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &kp PLUS                        &kp PRCNT  &kp LEFT_BRACE  &kp SEMICOLON  &kp RIGHT_BRACE  &kp EXCLAMATION
+  &kp HASH       &kp STAR              &kp COLON  &kp FSLH               &kp QUESTION                    &none      &kp PIPE        &kp TILDE      &kp AMPS         &kp DLLR
+                                                  &trans                 &none         &trans    &trans  &trans     &trans
             >;
         };
 
-        adj {
+        func {
             bindings = <
-  &none  &kp F1  &kp F2   &kp F3   &kp F4                     &none   &none           &kp UP_ARROW    &none            &msc SCRL_UP
-  &none  &kp F5  &kp F6   &kp F7   &kp F8                     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &msc SCRL_DOWN
-  &none  &kp F9  &kp F10  &kp F11  &kp F12                    &none   &none           &none           &msc SCRL_LEFT   &msc SCRL_RIGHT
-                          &trans   &trans   &trans    &trans  &trans  &trans
+  &msc SCRL_LEFT   &kp F1  &kp F2   &kp F3   &kp F4                     &none   &none           &kp UP_ARROW    &none            &msc SCRL_UP
+  &msc SCRL_RIGHT  &kp F5  &kp F6   &kp F7   &kp F8                     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &msc SCRL_DOWN
+  &none            &kp F9  &kp F10  &kp F11  &kp F12                    &none   &none           &none           &none            &none
+                                    &trans   &trans   &trans    &trans  &trans  &trans
+            >;
+        };
+
+        ctrls {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans          &trans      &trans        &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &kp C_VOL_DN    &kp K_MUTE  &kp C_VOL_UP  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &kp SCROLLLOCK  &trans      &kp C_PAUSE   &trans
+                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
