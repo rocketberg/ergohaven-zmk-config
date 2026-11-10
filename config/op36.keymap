@@ -69,7 +69,7 @@
   &kp N1        &kp N2        &kp N3            &kp N4          &kp N5                      &kp N6  &kp N7           &kp N8             &kp N9         &kp N0
   &kp LEFT_GUI  &kp LALT      &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp HOME                    &none   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_GUI
   &kp TAB       &kp CAPSLOCK  &none             &kp ESCAPE      &kp END                     &none   &kp ESCAPE       &none              &kp CAPSLOCK   &kp BACKSPACE
-                                                &trans          &none     &trans    &trans  &none   &trans
+                                                &trans          &none     &trans    &trans  &mo 2   &trans
             >;
         };
 
@@ -78,7 +78,7 @@
   &kp AT         &kp LT                &kp EQUAL  &kp GT                 &kp GRAVE                       &kp CARET  &kp LBKT        &kp UNDER      &kp RBKT         &none
   &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &kp PLUS                        &kp PRCNT  &kp LEFT_BRACE  &kp SEMICOLON  &kp RIGHT_BRACE  &kp EXCLAMATION
   &kp HASH       &kp STAR              &kp COLON  &kp FSLH               &kp QUESTION                    &none      &kp PIPE        &kp TILDE      &kp AMPS         &kp DLLR
-                                                  &trans                 &none         &trans    &trans  &trans     &trans
+                                                  &trans                 &mo 1         &trans    &trans  &trans     &trans
             >;
         };
 
