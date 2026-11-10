@@ -53,7 +53,7 @@
         };
     };
 
-    keymap {
+     keymap {
         compatible = "zmk,keymap";
 
         base {
@@ -63,8 +63,6 @@
   &kp Z  &kp X  &kp C  &kp V  &kp B                          &kp N  &kp M  &kp COMMA  &kp DOT  &kp SQT
                        &mo 3  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &mo 3
             >;
-
-            display-name = "Base";
         };
 
         nav {
@@ -74,8 +72,6 @@
   &kp TAB       &kp CAPSLOCK  &none             &kp ESCAPE      &kp END                     &none   &kp ESCAPE       &none              &kp CAPSLOCK   &kp BACKSPACE
                                                 &trans          &none     &trans    &trans  &mo 2   &trans
             >;
-
-            display-name = "Nav";
         };
 
         sym {
@@ -85,8 +81,6 @@
   &kp HASH       &kp STAR              &kp COLON  &kp FSLH               &kp QUESTION                    &none      &kp PIPE        &kp TILDE      &kp AMPS         &kp DLLR
                                                   &trans                 &mo 1         &trans    &trans  &trans     &trans
             >;
-
-            display-name = "Symbols";
         };
 
         func {
@@ -105,8 +99,6 @@
   &trans  &trans  &trans  &trans  &bt BT_SEL 1                    &bt BT_SEL 4  &kp C_BRIGHTNESS_DEC  &trans      &kp C_BRIGHTNESS_INC  &trans
                           &trans  &trans        &trans    &trans  &trans        &trans
             >;
-
-            display-name = "Adjust";
         };
     };
 };
